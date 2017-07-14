@@ -1,5 +1,7 @@
 ---
 layout:     post
+title:      "CSS 1px"
+subtitle:   "Retina屏幕1px边框问题"
 tags:
    - css
 ---
