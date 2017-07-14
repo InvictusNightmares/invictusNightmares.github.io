@@ -15,7 +15,7 @@ devicePixelRatio的官方的定义为：
  在2014年的 WWDC，“设计响应的Web体验” 一讲中，Ted O’Connor 讲到关于“retina
 hairlines”（retina 极细的线）：在retina屏上仅仅显示1物理像素的边框，开发者应该如何处理呢。
 他们曾介绍到 iOS 8 和 OS X Yosemite 即将支持 0.5px 的边框:
-<center>![](img/201707/15000159723693.jpg)</center><center>`0.5px边框`</center>
+<center>![](img/404-bg.jpg)</center><center>`0.5px边框`</center>
 
 额的神呐！so easy! 果真如此吗？
 这样还不够（WWDC幻灯片通常是“唬人”的），但是相差不多。
