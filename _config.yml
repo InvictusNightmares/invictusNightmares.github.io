@@ -1,7 +1,7 @@
 # Site settings
 title: Invictus Blog
-SEOTitle: Invictus bolog | 技术博客
-header-img: img/home-bg.jpg
+SEOTitle: Invictus Blog | 技术博客
+header-img: img/home.jpg
 email: invictusNightmares@gmail.com
 description: "node, 前端, javascript"
 keyword: "node java javascript vue react"
