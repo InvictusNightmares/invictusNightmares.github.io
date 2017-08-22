@@ -1,11 +1,11 @@
 ---
 layout:     post
 title:      "javascript Deep Copy"
-subtitle:   "Git的一些命令"
+subtitle:   "javascript深度拷贝对象"
 tags:
    - javascript
 ---
-# javascript深度拷贝对象
+#javascript深度拷贝对象
 在代码复用模式里面有一种叫做“复制属性模式”（copying properties pattern）。谈到代码复用的时候，很有可能想到的是代码的继承性（inheritance）,但重要的是要记住其最终目标——我们要复用代码。继承性只是实现代码复用的一种手段，而不是唯一的方法。复制属性也是一种复用模式，它跟继承性是有所不同的。这种模式中，对象将从另外一个在对象中获取成员，其方法是仅需将其复制即可。用过jQuery的都知道，它有一个$.extend()方法，它的用途除了扩展第三方插件之外，还可以用来复制属性的。
 
 ```
