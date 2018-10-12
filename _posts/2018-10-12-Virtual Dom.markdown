@@ -11,7 +11,7 @@ tags:
 从我自己的经历说起，最开始是做Android开发，接触前端是从React开始的，没用经历过像JS，JQuery等这种传统的前端技术，不过也庆幸没有经历兼容IE6的痛苦(逃。写多了React，Vue这种目前比较流行的前端框架就觉得MVVM，双向数据绑定，高性能Virtual Dom这些技术是理所当然的，直到面试的时候被问的哑口无言才下定决心要好好学习这些“理所当然”的技术。
 ###2.举个栗子
 假如现在需要写一个像下面一样的表格的应用程序，这个表格可以根据不同的字段进行升序或者降序的展示。（这时候让我们忘了Vue，忘了React，忘了v-model，忘了setState）
-<center><img src='../../../../img/201810/vd1.jpg'></center>
+<center><img src='../../../../img/201810/vd1.png'></center>
 
 这时候我们首先想到的可能是这样:
 
@@ -34,7 +34,7 @@ const data = [{...}, {...}, {..}, ..] // 表格数据
 
 ###3.Virtual Dom算法
 DOM是慢的，我在控制台把一个简单的div属性打印出来见下图:
-<center><img src='../../../../img/201810/vd2.jpg'></center>
+<center><img src='../../../../img/201810/vd2.png'></center>
 这仅仅是第一层，真正的DOM元素非常庞大，我们在操作的DOM的时候都是小心翼翼的，轻微的改变可能就会引起浏览器重排，这可是杀死性能的罪魁祸首。
 
 相比于DOM对象，原生的JS对象处理起来的更快更简单，DOM树的结构和属性信息我们可以很简单的用JS对象标识：
@@ -146,14 +146,14 @@ document.body.appendChild(ulRoot);
 ####4.2 比较两棵虚拟DOM树的差异
 比较两棵DOM树的差异是Virtual DOM算法最核心的部分，也就是所谓的Virtual Dom的diff算法，两个树的完全的 diff 算法是一个时间复杂度为O(n ^ 3)的问题。但是在前端实际操作中很少会跨越层级地移动DOM元素。所以Virtual DOM只会对同一个层级的元素进行对比：
 
-<center><img src='../../../../img/201810/vd3.jpg'></center>
+<center><img src='../../../../img/201810/vd3.png'></center>
 
 上面的div只会跟同一层级的div进行对比，第二层级只会跟第二层级对比，这样的话算法的时间复杂度可以降到O(n)。
 
 **4.2.1深度优先遍历，记录差异**
 对新旧两棵树进行一个深度优先的遍历，这样每个节点都会有一个唯一的标记：
 
-<center><img src='../../../../img/201810/vd4.jpg'></center>
+<center><img src='../../../../img/201810/vd4.png'></center>
 
 在深度优先遍历的时候，每遍历到一个节点就把该节点和新的的树进行对比。如果有差异的话就记录到一个对象里面。
 
@@ -336,13 +336,13 @@ patch(root, patches)；
 ###6.Vue Virtual Dom VS React Virtual Dom
 Vue官网上贴了这样一段话：
 
-<center><img src='../../../../img/201810/vd5.jpg'></center>
+<center><img src='../../../../img/201810/vd5.png'></center>
 
 
 尤大也在知乎上给出了答案：
 
 
-<center><img src='../../../../img/201810/vd6.jpg'></center>
+<center><img src='../../../../img/201810/vd6.png'></center>
 
 Vue和React的diff算法几乎一样，每state改变时，Vue会根据依赖找到最上层的vdom并以该组件为根，重新渲染整个VDom树而React会根据调用setState这个方法的这个组件， 以该组件为根重新渲染整个VDom树。
 
