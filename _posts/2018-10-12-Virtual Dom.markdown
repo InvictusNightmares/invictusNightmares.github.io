@@ -154,6 +154,7 @@ document.body.appendChild(ulRoot);
 上面的div只会跟同一层级的div进行对比，第二层级只会跟第二层级对比，这样的话算法的时间复杂度可以降到O(n)。
 
 **4.2.1深度优先遍历，记录差异**
+
 对新旧两棵树进行一个深度优先的遍历，这样每个节点都会有一个唯一的标记：
 
 <center><img src='../../../../img/201810/vd4.png'></center>
@@ -199,6 +200,7 @@ patches[0] = [{difference}, {difference}, ...] // 用数组存储新旧节点的
 那么以此类推,p就是patches[1]，ul就是patches[2]。
 
 **4.2.2差异类型**
+
 上面说的节点差异指什么？对DOM的操作可能会：
 1.替换掉原来的节点。
 2.移动、删除、新增子节点。
@@ -306,8 +308,11 @@ function applyPatches (node, currentPatches) {
 ```
 ### 5.小结
 Virtual Dom算法主要分为三个步骤：
+
 1.create element
+
 2.diff
+
 3.patch
 
 ```
