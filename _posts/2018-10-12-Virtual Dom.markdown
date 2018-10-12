@@ -35,7 +35,7 @@ const data = [{...}, {...}, {..}, ..] // 表格数据
 
 上述的方法其实都是在做一件事：**维护状态，更新视图**。
 
-###3.Virtual Dom算法
+### 3.Virtual Dom算法
 DOM是慢的，我在控制台把一个简单的div属性打印出来见下图:
 <center><img src='../../../../img/201810/vd2.png'></center>
 这仅仅是第一层，真正的DOM元素非常庞大，我们在操作的DOM的时候都是小心翼翼的，轻微的改变可能就会引起浏览器重排，这可是杀死性能的罪魁祸首。
@@ -72,10 +72,10 @@ const element = {
 
 Virtual DOM的本质其实是在JS和DOM之间做了一个缓存，可以类比CPU和硬盘，硬盘这么慢，就在它们之间加了一个缓存。CPU（JS）只操作内存（Virtual DOM），最后再把变更写入硬盘（DOM）。
 
-###4.算法实现
+### 4.算法实现
 上面说了Virtual Dom主要有三个步骤，那么下面就简述一下三个步骤的具体实现：
 
-####4.1 用JS对象模拟DOM树
+#### 4.1 用JS对象模拟DOM树
 
 用JS表示一个DOM节点很简单，只需要记录它的节点类型、属性，还有子节点：
 element.js
@@ -146,7 +146,7 @@ document.body.appendChild(ulRoot);
 </ul>
 ```
 
-####4.2 比较两棵虚拟DOM树的差异
+#### 4.2 比较两棵虚拟DOM树的差异
 比较两棵DOM树的差异是Virtual DOM算法最核心的部分，也就是所谓的Virtual Dom的diff算法，两个树的完全的 diff 算法是一个时间复杂度为O(n ^ 3)的问题。但是在前端实际操作中很少会跨越层级地移动DOM元素。所以Virtual DOM只会对同一个层级的元素进行对比：
 
 <center><img src='../../../../img/201810/vd3.png'></center>
@@ -253,7 +253,7 @@ patches[0] = [{
 是要注意的是，因为tagName是可重复的，不能用这个来进行对比。所以需要给子节点加上唯一标识key，列表对比的时候，使用key进行对比，这样才能复用老的 DOM 树上的节点。
 
 这样，我们就可以通过深度优先遍历两棵树，对每层的节点进行对比，记录下每个节点的差异了。
-####4.3 把差异应用到真正的DOM树上：
+#### 4.3 把差异应用到真正的DOM树上：
 因为步骤一所构建的JS对象树和render出来真正的DOM树的信息、结构是一样的。所以我们可以对那棵DOM树也进行深度优先的遍历，遍历的时候从步骤二生成的patches对象中找出当前遍历的节点差异，然后进行 DOM 操作。
 
 ```
@@ -304,7 +304,7 @@ function applyPatches (node, currentPatches) {
   })
 }
 ```
-###5.小结
+### 5.小结
 Virtual Dom算法主要分为三个步骤：
 1.create element
 2.diff
@@ -336,7 +336,7 @@ const patches = diff(tree, newTree)；
 patch(root, patches)；
 ```
 
-###6.Vue Virtual Dom VS React Virtual Dom
+### 6.Vue Virtual Dom VS React Virtual Dom
 Vue官网上贴了这样一段话：
 
 <center><img src='../../../../img/201810/vd5.png'></center>
