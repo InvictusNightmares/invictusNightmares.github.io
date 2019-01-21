@@ -81,7 +81,7 @@ new ValueCallback<String>() {
   1. 开发流程/更新机制复杂化，需要客户端，甚至服务端的共同协作
   2. 会相应的增加 App 包体积
   
-##Weex
+## Weex
 Weex是阿里在2016年6月开源的一种用于构建移动跨平台的UI框架，在2017年托管在Apache基金会上。
 
 **“Write once, run everywhere”** 这是Weex倡导的思想，借鉴如今大火的FaceBook开源的React Native的思想，选择使用Vue.js框架的语法开发weex代码，也可以使用Rax，无论是哪种语法，经过编译都可以被app中的weex sdk所解析，并在底层以Native的形式渲染。
@@ -103,7 +103,7 @@ Weex是阿里在2016年6月开源的一种用于构建移动跨平台的UI框架
 6、Web 今天的生态和社区是非常繁荣的，有很多成熟的工具、库、工程体系、最佳实践可以使用、引入和借鉴。
 `
 
-###Vue在Weex中的不同
+### Vue在Weex中的不同
 **1.Weex环境中没有DOM**
 因为 Weex 解析 vue 得到的并不是 dom，而是原生布局树
 
@@ -114,7 +114,7 @@ Weex是阿里在2016年6月开源的一种用于构建移动跨平台的UI框架
 在 Weex 中能够调用移动设备原生 API，使用方法是通过注册、调用模块来实现。其中有一些模块是 Weex 内置的，如 clipboard 、 navigator 、storage 等。
 为了保持框架的通用性，Weex 内置的原生模块有限，不过 Weex 提供了横向扩展的能力，可以扩展原生模块，具体的扩展方法请参考[iOS扩展](http://weex.apache.org/cn/guide/extend-ios.html)和[Android扩展](http://weex.apache.org/cn/guide/extend-android.html)。
 
-###样式差异
+### 样式差异
 Weex 中的样式是由原生渲染器解析的，出于性能和功能复杂度的考虑，Weex 对 CSS 的特性做了一些取舍
 
 **1.Weex 中只支持单个类名选择器，不支持关系选择器，也不支持属性选择器。**
@@ -126,7 +126,7 @@ Weex 中的样式是由原生渲染器解析的，出于性能和功能复杂度
 4.css不支持3D变换
 
 
-###打包
+### 打包
 熟悉 React Native 的人都知道， React Native 的发布实际上就是发布一个 JSBundle，Weex 也是这样，但不同的是，Weex 将工程进行分包，发布多个 JSBundle。因为 Weex 是单页独立开发的，每个页面都将通过 Weex 打包器将 vue/we 页面打包成一个单独的 JSBundle，这样的好处在于减少单个 bundle 包的大小，使其变的足够小巧轻量，提高增量更新的效率。
 
 打包后的 JSBundle 有两种格式
@@ -148,7 +148,7 @@ Weex 中的样式是由原生渲染器解析的，出于性能和功能复杂度
 /******/ })
 ```
 
-###执行
+### 执行
 Weex 的 iOS 和 Android 客户端的【JSFramework】中都会运行一个 JavaScript 引擎，来执行 JS bundle，同时向各端的渲染层发送规范化的指令，调度客户端的渲染和其它各种能力。iOS 下选择了 JavaScriptCore 内核，而在 Android 下选择了 UC 提供的 v8 内核（RN两端都是JavaScriptCore 内核）。
 
 JSBundle 被 push 到客户端后就会在 JSFramework 中执行，最终输出三端可读性的 VNode 节点，数据结构简化如下：
@@ -191,7 +191,7 @@ JSBundle 被 push 到客户端后就会在 JSFramework 中执行，最终输出�
 <center><img src='../../../../img/201901/weex2.jpeg'></center>
 
 
-##Flutter
+## Flutter
 
 我们先看看官方对它的定义：
 `
