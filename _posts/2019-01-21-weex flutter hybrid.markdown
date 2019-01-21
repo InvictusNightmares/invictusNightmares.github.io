@@ -102,6 +102,7 @@ Weex是阿里在2016年6月开源的一种用于构建移动跨平台的UI框架
 5、Web 是一种标准化的技术，标准本身就是一种力量，基于标准、尊重标准、贴近标准都意味着拥有更多的可能性。
 6、Web 今天的生态和社区是非常繁荣的，有很多成熟的工具、库、工程体系、最佳实践可以使用、引入和借鉴。
 `
+
 ###Vue在Weex中的不同
 **1.Weex环境中没有DOM**
 因为 Weex 解析 vue 得到的并不是 dom，而是原生布局树
@@ -187,7 +188,7 @@ JSBundle 被 push 到客户端后就会在 JSFramework 中执行，最终输出�
 官方配图：
 <center><img src='../../../../img/201901/weex1.png'></center>
 扩展配图：
-<center><img src='../../../../img/201901/weex2.jpg'></center>
+<center><img src='../../../../img/201901/weex2.jpeg'></center>
 
 
 ##Flutter
