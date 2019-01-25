@@ -1,3 +1,11 @@
+---
+layout:     post
+title:      "learn You Don't Know JS: Types & Grammar"
+subtitle:   "你不知道的JavaScript学习-类型和语法"
+tags:
+   - javascript
+---
+
 # 你不知道的JavaScript学习-类型和语法
 
 ## 类型
