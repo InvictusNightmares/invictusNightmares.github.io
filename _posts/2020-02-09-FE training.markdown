@@ -158,7 +158,7 @@ Hybrid开发最重要的就是JS和Native之间的通信，也就是我们常说
 
 前端开发离不开打包，有时候源代码写的烂但是打包配置的好往往也能解决很多前端性能问题，常用的打包工具有Grunt，Gulp，Webpack等，下面主要讲一下Webpack：
 
-![](https://user-gold-cdn.xitu.io/2020/1/5/16f741d40eaf5b45?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+<center><img src='../../../../img/202002/training6.jpg'></center>
 
 其主要核心的概念为以下这些：
 
