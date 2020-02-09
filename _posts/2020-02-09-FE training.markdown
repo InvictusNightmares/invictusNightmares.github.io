@@ -134,13 +134,13 @@ tags:
 
 顾名思义Hybrid开发就是混合开发，Native相关的原生代码和H5的代码相结合，可以做到接近80%的代码可以共用，大大降低成本，是许多互联网公司的第一选择。
 
-![](https://segmentfault.com/img/remote/1460000019274794?w=688&h=318)
+<center><img src='../../../../img/202002/training1.png'></center>
 
 Hybrid开发最重要的就是JS和Native之间的通信，也就是我们常说的JSBridge：
 
-![](https://segmentfault.com/img/remote/1460000019274795?w=422&h=506)
+<center><img src='../../../../img/202002/training2.png'></center>
 
-![](https://segmentfault.com/img/remote/1460000019274796?w=833&h=347)
+<center><img src='../../../../img/202002/training3.png'></center>
 
 **Web开发**
 
@@ -148,11 +148,11 @@ Hybrid开发最重要的就是JS和Native之间的通信，也就是我们常说
 
 **1.React**
 
-![](https://github.com/adam-golab/react-developer-roadmap/raw/master/roadmap-cn.png)
+<center><img src='../../../../img/202002/training4.png'></center>
 
 **2.Vue**
 
-![](https://github.com/flaviocopes/vue-developer-roadmap/raw/master/roadmap.svg?sanitize=true)
+<center><img src='../../../../img/202002/training5.svg'></center>
 
 **打包**
 
